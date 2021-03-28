@@ -1,15 +1,13 @@
 import { Layout as AntLayout } from "antd";
 import styled from "styled-components";
+import ArticleModal from "./ArticleModal";
 import GoogleMap from "./GoogleMap";
+import Header from "./Header";
 
-const { Header, Content, Footer: AntFooter } = AntLayout;
+const { Content, Footer: AntFooter } = AntLayout;
 
 const Layout = styled(AntLayout)`
   min-height: 100vh;
-`;
-
-const Logo = styled.h2`
-  color: #fff;
 `;
 
 const MainContent = styled(Content)`
@@ -23,10 +21,9 @@ const Footer = styled(AntFooter)`
 export default function Page() {
   return (
     <Layout>
-      <Header>
-        <Logo>Wikipedia Map</Logo>
-      </Header>
+      <Header />
       <MainContent>
+        <ArticleModal />
         <GoogleMap />
       </MainContent>
       <Footer>Ant Design ©2018 Created by Ant UED</Footer>
